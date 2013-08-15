@@ -7,14 +7,13 @@
 
     <script type="text/javascript" language="javascript">
         window.onload = function() {
-            document.getElementById('Tacho').innerHTML = "0";
+            document.getElementById("Tacho").innerHTML = "0";
             document.addEventListener("deviceready", function() {
                 navigator.geolocation.watchPosition(function(position) {
-                    document.getElementById('Tacho').innerHTML = "700";
-                    //                document.getElementById('Tacho').innerHTML = Math.floor(position.coords.speed * 3.6);
+                    document.getElementById("Tacho").innerHTML = Math.floor(position.coords.speed * 3.6);
                 },
                 function(error) {
-                    document.getElementById('Tacho').innerHTML = "-1";
+                    document.getElementById("Tacho").innerHTML = "-1";
                 }, {
                     enableHighAccuracy: true,
                     maximumAge: 500,
