@@ -13,7 +13,7 @@
                     document.getElementById("Tacho").innerHTML = Math.floor(position.coords.speed * 3.6);
                 },
                 function(error) {
-                    document.getElementById("Tacho").innerHTML = error;
+                    document.getElementById("Tacho").innerHTML = "0";
                 }, {
                     enableHighAccuracy: true,
                     maximumAge: 500,
